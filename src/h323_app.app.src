@@ -1,0 +1,12 @@
+{application, h323_app, [
+    {description, "H323 application test."},
+    {vsn, "0.9.0"},
+    {modules, [q931,h245,ras,rasa,rasg,rasutil,rasdb,rasr]},
+    {registered, [h323_sup,h323_server]},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {mod, {h323_app, []}},
+    {env, [{ternum,100}]}
+]}.
